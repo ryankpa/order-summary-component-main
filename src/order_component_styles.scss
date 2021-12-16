@@ -1,0 +1,122 @@
+// widths
+$order-summary-width: 90%;
+
+// breakpoints
+$breakpoint-mobile: 375px;
+
+// font
+$font-family: 'Red Hat Display', sans-serif;
+$p-fontsize: 16px;
+$regular-fontweight: 500;
+$bold-fontweight: 700;
+$extrabold-fontweight: 900;
+
+// colors
+$primary-paleblue: hsl(225, 100%, 94%);
+$primary-brightblue: hsl(245, 75%, 52%);
+$neutral-verypaleblue: hsl(225, 100%, 98%);
+$neutral-desaturatedblue: hsl(224, 23%, 55%);
+$neutral-darkblue: hsl(223, 47%, 23%);
+
+// mixins
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .order_component {
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width: ($breakpoint-mobile + 1)) {
+    .order_component {
+        width: 30vw;
+    }
+}
+
+html {
+    background-color: $primary-paleblue;
+}
+
+* {
+    font-family: $font-family;
+    font-weight: $regular-fontweight;
+    text-align: center;
+}
+
+p {
+    font-size: $p-fontsize;
+    color: $neutral-desaturatedblue;
+}
+
+h2, h4 {
+    font-weight: $extrabold-fontweight;
+    color: $neutral-darkblue;
+}
+
+button {
+    font-weight: $bold-fontweight;
+}
+
+img {
+    object-fit: contain;
+    border-radius: 20px 20px 0 0;
+}
+
+.order_component {
+    @include flex($direction: column);
+    margin: auto;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.order_summary {
+    @include flex($direction: column);
+    width: $order-summary-width;
+    margin: 0 auto;
+}
+
+.order_details {
+    background-color: $neutral-verypaleblue;
+    border-radius: 10px;
+    width: inherit;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    padding: 20px 10px;
+}
+
+.order_details img{
+    grid-column: 1 / 1;
+    grid-row: 1 / span 2;
+    width: fit-content;
+    align-self: center;
+}
+
+.order_details h4{
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+    justify-self: left;
+    align-self: center;
+    margin: 0 0;
+}
+
+.order_details strong {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    justify-self: left;
+    align-self: center;
+    color: $neutral-desaturatedblue;
+}
+
+.order_details a {
+    grid-column: 3 / 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+    color: $primary-brightblue;
+    font-weight: $extrabold-fontweight;
+}

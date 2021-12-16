@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel='stylesheet' href='styles.css' />
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,28 +20,30 @@
   </style>
 </head>
 <body>
-  <section class="order-summary-component">
+  <div class='order_component'>
     <img id='illustration-hero' src='../images/illustration-hero.svg' 
-      alt='Image of a person wearing headphones while listening and dancing to music on their phone'/>
-    <h2>Order Summary</h2>
-
-    <p>
-      You can now listen to millions of songs, audiobooks, and podcasts on any 
-      device anywhere you like!
-    </p>
-
-    <div>
-      <img id="icon-music" src='../images/icon-music.svg'
-        alt='A circle icon with a music note in the center'/>
-      <h4>Annual Plan</h4>
-      <strong>$59.99/year</strong>
-
-      <a href="#" role="button">Change</a>
-    </div>
-
-    <button>Proceed to Payment</button>
-    <button>Cancel Order</button>
-  </section>
+    alt='Image of a person wearing headphones while listening and dancing to music on their phone'/>
+    <section class="order_summary">
+      <h2>Order Summary</h2>
+  
+      <p>
+        You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!
+      </p>
+  
+      <section class="order_details">
+        <img id="icon-music" src='../images/icon-music.svg'
+          alt='A circle icon with a music note in the center'/>
+        <h4>Annual Plan</h4>
+        <strong class="cost">$59.99/year</strong>
+  
+        <a href="#" role="button">Change</a>
+      </section>
+  
+      <button class="proceed_button">Proceed to Payment</button>
+      <button class="cancel_button">Cancel Order</button>
+    </section>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Ryan Kevin Atienza</a>.
