@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .order_component {
     width: 87vw;
     height: fit-content;
@@ -12,10 +12,10 @@
     background-image: url("../images/pattern-background-mobile.svg");
   }
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 426px) {
   .order_component {
     position: relative;
-    width: 30vw;
+    width: 400px;
     height: fit-content;
     top: 100px;
   }

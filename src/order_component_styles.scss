@@ -2,7 +2,7 @@
 $order-summary-width: 92%;
 
 // breakpoints
-$breakpoint-mobile: 375px;
+$breakpoint-mobile: 425px;
 
 // font
 $font-family: 'Red Hat Display', sans-serif;
@@ -42,7 +42,7 @@ $neutral-darkblue: hsl(223, 47%, 23%);
 @media screen and (min-width: ($breakpoint-mobile + 1)) {
     .order_component {
         position: relative;
-        width: 30vw;
+        width: 400px;
         height: fit-content;
         top: 100px;
     }
