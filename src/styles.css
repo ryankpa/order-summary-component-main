@@ -1,32 +1,31 @@
+.order_component {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: fit-content;
+  margin: auto;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 20px 20px -10px #7280a7;
+  padding-bottom: 10px;
+  top: 100px;
+}
+
+html {
+  background-color: #e0e8ff;
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-image: url("../images/pattern-background-mobile.svg");
+}
+
 @media screen and (max-width: 425px) {
   .order_component {
-    position: relative;
     width: 87vw;
-    height: fit-content;
-    padding-bottom: 10px;
-    top: 100px;
-  }
-
-  html {
-    background-color: #e0e8ff;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-image: url("../images/pattern-background-mobile.svg");
   }
 }
 @media screen and (min-width: 426px) {
   .order_component {
-    position: relative;
     width: 400px;
-    height: fit-content;
-    top: 100px;
-  }
-
-  html {
-    background-color: #e0e8ff;
-    background-size: 100% 70%;
-    background-repeat: no-repeat;
-    background-image: url("../images/pattern-background-desktop.svg");
   }
 }
 * {
@@ -66,7 +65,7 @@ button {
   box-shadow: 0 20px 20px #e0e8ff;
 }
 
-.proceed:active {
+.proceed:hover {
   background-color: #3829e0;
   opacity: 0.7;
 }
@@ -76,22 +75,13 @@ button {
   color: #7280a7;
 }
 
-.cancel:active {
+.cancel:hover {
   color: #1f2f56;
 }
 
-img {
+.order_component img {
   object-fit: contain;
   border-radius: 20px 20px 0 0;
-}
-
-.order_component {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: 0px 20px 20px -10px #7280a7;
 }
 
 .order_summary {
@@ -128,7 +118,6 @@ img {
   grid-column: 2/2;
   grid-row: 1/1;
   justify-self: left;
-  align-self: center;
   margin: 0 0;
 }
 
@@ -136,20 +125,18 @@ img {
   grid-column: 2/2;
   grid-row: 2/2;
   justify-self: left;
-  align-self: center;
   color: #7280a7;
 }
 
 .order_details a {
   grid-column: 3/3;
   grid-row: 1/span 2;
-  align-self: center;
   color: #3829e0;
   font-size: 0.8rem;
   font-weight: 900;
 }
 
-.order_details a:active {
+.order_details a:hover {
   opacity: 0.7;
   text-decoration: none;
 }

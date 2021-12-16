@@ -24,36 +24,34 @@ $neutral-darkblue: hsl(223, 47%, 23%);
     flex-direction: $direction;
 }
 
+.order_component {
+    @include flex($direction: column);
+    position: relative;
+    height: fit-content;
+    margin: auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 20px 20px -10px $neutral-desaturatedblue;
+    padding-bottom: 10px;
+    top: 100px;
+}
+
+html {
+    background-color: $primary-paleblue;
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+    background-image: url('../images/pattern-background-mobile.svg');
+}
+
 @media screen and (max-width: $breakpoint-mobile) {
     .order_component {
-        position: relative;
         width: 87vw;
-        height: fit-content;
-        padding-bottom: 10px;
-        top: 100px;
-    }
-
-    html {
-        background-color: $primary-paleblue;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-image: url('../images/pattern-background-mobile.svg');
     }
 }
 
 @media screen and (min-width: ($breakpoint-mobile + 1)) {
     .order_component {
-        position: relative;
         width: 400px;
-        height: fit-content;
-        top: 100px;
-    }
-
-    html {
-        background-color: $primary-paleblue;
-        background-size: 100% 70%;
-        background-repeat: no-repeat;
-        background-image: url('../images/pattern-background-desktop.svg');
     }
 }
 
@@ -94,7 +92,7 @@ button {
     box-shadow: 0 20px 20px $primary-paleblue;
 }
 
-.proceed:active {
+.proceed:hover {
     background-color: $primary-brightblue;
     opacity: .7;
 }
@@ -104,21 +102,13 @@ button {
     color: $neutral-desaturatedblue;
 }
 
-.cancel:active {
+.cancel:hover {
     color: $neutral-darkblue;
 }
 
-img {
+.order_component img {
     object-fit: contain;
     border-radius: 20px 20px 0 0;
-}
-
-.order_component {
-    @include flex($direction: column);
-    margin: auto;
-    border-radius: 20px;
-    background-color: white;
-    box-shadow: 0px 20px 20px -10px $neutral-desaturatedblue;
 }
 
 .order_summary {
@@ -136,7 +126,6 @@ img {
     display: grid;
     grid-template-columns: 3;
     grid-template-rows: 2;
-
     padding: 20px 0;
 }
 
@@ -156,7 +145,6 @@ img {
     grid-column: 2 / 2;
     grid-row: 1 / 1;
     justify-self: left;
-    align-self: center;
     margin: 0 0;
 }
 
@@ -164,20 +152,18 @@ img {
     grid-column: 2 / 2;
     grid-row: 2 / 2;
     justify-self: left;
-    align-self: center;
     color: $neutral-desaturatedblue;
 }
 
 .order_details a {
     grid-column: 3 / 3;
     grid-row: 1 / span 2;
-    align-self: center;
     color: $primary-brightblue;
     font-size: .8rem;
     font-weight: $extrabold-fontweight;
 }
 
-.order_details a:active {
+.order_details a:hover {
     opacity: .7;
     text-decoration: none;
 }
