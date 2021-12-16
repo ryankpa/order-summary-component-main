@@ -30,16 +30,29 @@ $neutral-darkblue: hsl(223, 47%, 23%);
         height: fit-content;
         padding-bottom: 10px;
     }
+
+    html {
+        background-color: $primary-paleblue;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url('../images/pattern-background-mobile.svg');
+    }
 }
 
 @media screen and (min-width: ($breakpoint-mobile + 1)) {
     .order_component {
+        position: relative;
         width: 30vw;
+        height: fit-content;
+        top: 100px;
     }
-}
 
-html {
-    background-color: $primary-paleblue;
+    html {
+        background-color: $primary-paleblue;
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+        background-image: url('../images/pattern-background-desktop.svg');
+    }
 }
 
 * {
