@@ -26,9 +26,11 @@ $neutral-darkblue: hsl(223, 47%, 23%);
 
 @media screen and (max-width: $breakpoint-mobile) {
     .order_component {
+        position: relative;
         width: 87vw;
         height: fit-content;
         padding-bottom: 10px;
+        top: 100px;
     }
 
     html {
@@ -92,9 +94,18 @@ button {
     box-shadow: 0 20px 20px $primary-paleblue;
 }
 
+.proceed:active {
+    background-color: $primary-brightblue;
+    opacity: .7;
+}
+
 .cancel {
     background-color: transparent;
     color: $neutral-desaturatedblue;
+}
+
+.cancel:active {
+    color: $neutral-darkblue;
 }
 
 img {
@@ -107,6 +118,7 @@ img {
     margin: auto;
     border-radius: 20px;
     background-color: white;
+    box-shadow: 0px 20px 20px -10px $neutral-desaturatedblue;
 }
 
 .order_summary {
@@ -163,4 +175,9 @@ img {
     color: $primary-brightblue;
     font-size: .8rem;
     font-weight: $extrabold-fontweight;
+}
+
+.order_details a:active {
+    opacity: .7;
+    text-decoration: none;
 }
