@@ -1,5 +1,5 @@
 // widths
-$order-summary-width: 90%;
+$order-summary-width: 92%;
 
 // breakpoints
 $breakpoint-mobile: 375px;
@@ -26,8 +26,9 @@ $neutral-darkblue: hsl(223, 47%, 23%);
 
 @media screen and (max-width: $breakpoint-mobile) {
     .order_component {
-        width: 90vw;
-        height: 70vh;
+        width: 87vw;
+        height: fit-content;
+        padding-bottom: 10px;
     }
 }
 
@@ -45,20 +46,42 @@ html {
     font-family: $font-family;
     font-weight: $regular-fontweight;
     text-align: center;
+    line-height: 1.5rem;
 }
 
 p {
     font-size: $p-fontsize;
     color: $neutral-desaturatedblue;
+    margin: 0;
+    padding: 20px 15px;
 }
 
 h2, h4 {
     font-weight: $extrabold-fontweight;
     color: $neutral-darkblue;
+    margin-top: 35px;
+    margin-bottom: 0px;
 }
 
 button {
     font-weight: $bold-fontweight;
+    font-size: $p-fontsize;
+    width: inherit;
+    margin: 10px auto;
+    padding: 13px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.proceed {
+    background-color: $primary-brightblue;
+    color: white;
+    box-shadow: 0 20px 20px $primary-paleblue;
+}
+
+.cancel {
+    background-color: transparent;
+    color: $neutral-desaturatedblue;
 }
 
 img {
@@ -84,17 +107,24 @@ img {
     border-radius: 10px;
     width: inherit;
     margin: auto;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: 3;
     grid-template-rows: 2;
-    padding: 20px 10px;
+
+    padding: 20px 0;
+}
+
+.order_grid_item {
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
 }
 
 .order_details img{
     grid-column: 1 / 1;
     grid-row: 1 / span 2;
-    width: fit-content;
-    align-self: center;
+
 }
 
 .order_details h4{
@@ -118,5 +148,6 @@ img {
     grid-row: 1 / span 2;
     align-self: center;
     color: $primary-brightblue;
+    font-size: .8rem;
     font-weight: $extrabold-fontweight;
 }
