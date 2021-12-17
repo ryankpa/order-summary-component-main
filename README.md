@@ -94,5 +94,5 @@ For plain CSS, I'd like to improve on making my stylesheets more clean and effic
 
 ## Author
 
-- Website - [My Github Pages Site](https://ryankpa.github.io/)
+- Website - [Github Pages Site](https://ryankpa.github.io/)
 - Frontend Mentor - [@ryankpa](https://www.frontendmentor.io/profile/ryankpa)
