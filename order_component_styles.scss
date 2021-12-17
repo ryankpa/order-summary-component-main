@@ -40,18 +40,25 @@ html {
     background-color: $primary-paleblue;
     background-size: 100% 70%;
     background-repeat: no-repeat;
-    background-image: url('../images/pattern-background-mobile.svg');
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
     .order_component {
         width: 87vw;
     }
+
+    html {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
 }
 
 @media screen and (min-width: ($breakpoint-mobile + 1)) {
     .order_component {
         width: 400px;
+    }
+
+    html {
+        background-image: url('./images/pattern-background-desktop.svg');
     }
 }
 
