@@ -15,17 +15,24 @@ html {
   background-color: #e0e8ff;
   background-size: 100% 70%;
   background-repeat: no-repeat;
-  background-image: url("../images/pattern-background-mobile.svg");
 }
 
 @media screen and (max-width: 425px) {
   .order_component {
     width: 87vw;
   }
+
+  html {
+    background-image: url("../images/pattern-background-mobile.svg");
+  }
 }
 @media screen and (min-width: 426px) {
   .order_component {
     width: 400px;
+  }
+
+  html {
+    background-image: url("../images/pattern-background-desktop.svg");
   }
 }
 * {
