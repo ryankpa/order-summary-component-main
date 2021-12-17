@@ -6,7 +6,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,9 +14,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -26,7 +23,7 @@ Users should be able to:
 
 - See hover states for interactive elements
 
-### Screenshot
+### Screenshots
 
 #### Desktop Version
 ![](./desktop.png)
@@ -36,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/ryankpa/order-summary-component-main](https://github.com/ryankpa/order-summary-component-main)
 - Live Site URL: [https://ryankpa-order-summary-component.glitch.me/](https://ryankpa-order-summary-component.glitch.me/)
 
 ## My process
@@ -53,42 +50,49 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+First and foremost, I learned how having a design ready for translation into a component is immensely helpful. Most of my practice with front end work involved me winging most of my layouts, which made the process feel directionless and cluttered. Having something to reference helped me come up with a gameplan to bring the concept to life.
 
-To see how you can add code snippets, see below:
+I also learned a little bit about making my html code more accessible through assigning roles to elements. More specifically, I learned that links that are used as buttons can be given a "button" role as shown here:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<a class="order_grid_item" href="#" role="button">
+  Change
+</a>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+
+Regarding styling, this was a great project for me to start working with Sass. I made use of two of its features, and I found them pretty neat. The first I made use of was the ability to store styles in variables:
+
+```scss
+$breakpoint-mobile: 425px;
+// ...
+$primary-brightblue: hsl(245, 75%, 52%);
+$neutral-verypaleblue: hsl(225, 100%, 98%);
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+Being able to refer to values by name helps my code easier to read and adjust, and it'll help with readability for when I come back to it after a while.
+
+I also used the Mixin declarations, which I found very helpful to prevent code duplication and allow for some flexibility using variables:
+
+```scss
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I solely used it for defining flexboxes and specifying its direction in one line. I realize I could have made use of the flex-flow property instead, but I wanted to give Mixins a try.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I would like to continue focusing on making my HTML more semantic and accessible for assistive technologies like screenreaders. I also definitely want to explore using Sass to its fullest potential. I can now finally understand how useful CSS preprocessors can be for projects on larger scales. 
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+For plain CSS, I'd like to improve on making my stylesheets more clean and efficient. Adhering to a top-down approach when it comes to styling can definitely help me achieve this goal.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Getting Started with Sass](https://sass-lang.com/guide) - This was a great introduction to using Sass. With my continued use of it, I will likely be referencing its official documentation.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [My Github Pages Site](https://ryankpa.github.io/)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
